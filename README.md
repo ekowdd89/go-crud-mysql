@@ -1,5 +1,5 @@
 # go-crud-mysql basic
-go version 1.21
-go mod tidy
+## go version 1.21
+## go mod tidy
 
-go run main.go
+## go run main.go
