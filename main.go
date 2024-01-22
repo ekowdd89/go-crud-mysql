@@ -42,6 +42,9 @@ func main() {
 
 	router.HandleFunc("/articles", article.GetArticle).Methods("GET")
 	router.HandleFunc("/articles/{id}", article.FindArticle).Methods("GET")
+	router.HandleFunc("/articles", category.CreateCategory).Methods("POST")
+	router.HandleFunc("/articles/{id}", category.UpdateCategory).Methods("PUT")
+	router.HandleFunc("/articles/{id}", category.DeleteCategory).Methods("DELETE")
 
 	var address = "localhost:8081"
 	log.Println("Server running on :", strings.Join([]string{"http://", address}, ""))
